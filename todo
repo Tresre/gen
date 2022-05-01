@@ -1,0 +1,4 @@
+window.speechSynthesis.cancel();
+var msg = new SpeechSynthesisUtterance();
+msg.text = "";
+window.speechSynthesis.speak(msg);

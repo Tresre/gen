@@ -19,28 +19,38 @@
     display: block;
     margin: auto;
     text-align: center;
-    width: 350px;
+    width: 95%;
+    max-width: 400px;
     height: 200px;
     top: 50px;
     border: 7px solid #2196F3;
     background: #323232;
     border-radius: 7px;
   }
+  .gen-text {
+  	position: relative;
+    font-size: 20px;
+    font-family: Source Code Pro;
+    font-weight: 600;
+    color: white;
+    top: 50px;
+  }
   .checkbox input { 
     visibility: hidden;
   }
-  input:checked + .playlist {
+  input:checked + .button {
     background-color: #2196F3;
   }
   .buttonContainer {
     margin: auto;
-    width: 350px;
+    width: 95%;
+    max-width: 350px;
     height: 250px;
     top: 50px;
     background-color: #141414;
   	position: relative;
     margin: auto;
-    border: 5px solid green;
+    border: 5px solid #262626;
     border-radius: 10px;
   }
   .button {
@@ -48,6 +58,7 @@
     display: block;
     margin: auto;
     width: 250px;
+    top: 17px;
     height: 40px;
     cursor: pointer;
     transition: .4s;
@@ -70,33 +81,22 @@
   }
   .button:active {
 	transform: scale(0.95);
+    background-color: #2196F3;
   }
 </style>
 
-<div class="gen">test</div>
+<div class="gen"><a class="gen-text">test</a></div>
     <br><br><br>
     
-	<div class="buttonContainer">
+<div class="buttonContainer">
     
-    <label class="checkbox">
-      <input type="checkbox" id="button1" onclick="button1()">
-      <span class="button"><a class="button-text">Option 1</a></span>
-    </label>
-    
-    <label class="checkbox">
-      <input type="checkbox" id="button2" onclick="button2()">
-      <span class="button"><a class="button-text">Option 2</a></span>
-    </label>
-    
-    <label class="checkbox">
-      <input type="checkbox" id="button3" onclick="button3()">
-      <span class="button"><a class="button-text">Option 3</a></span>
-    </label>
-    
-    <label class="checkbox">
-      <input type="checkbox" id="button4" onclick="button4()">
-      <span class="button"><a class="button-text">Option 4</a></span>
-    </label>
+    <a class="button" onclick="button(1)"><span class="button-text">Option 1</span></a>
+    <br>
+    <a class="button" onclick="button(1)"><span class="button-text">Option 1</span></a>
+    <br>
+    <a class="button" onclick="button(1)"><span class="button-text">Option 1</span></a>
+    <br>
+    <a class="button" onclick="button(1)"><span class="button-text">Option 1</span></a>
   
 </div>
 

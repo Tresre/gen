@@ -40,9 +40,13 @@ var segment = 1;
 function redirect() {
   var location = window.location;
   var text = String(location.pathname.split("/")[segment + 1]);
-  console.log(text);
-  text = text.replace("+", " ");
-  document.getElementById("output").innerHTML = text;
+  const splitText = text.split(".");
+  output = splitText[0];
+  console.log(output);
+  console.log("0" + splitText[0]);
+  console.log("1" + splitText[1]);
+  output = output.replace("+", " ");
+  document.getElementById("output").innerHTML = output;
 }
 
 redirect();

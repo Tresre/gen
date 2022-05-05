@@ -55,6 +55,7 @@ function redirect() {
       window.speechSynthesis.cancel();
       var msg = new SpeechSynthesisUtterance();
       msg.text = String(output);
+      console.log(msg);
       window.speechSynthesis.speak(msg);
     }
   }

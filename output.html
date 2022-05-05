@@ -32,17 +32,16 @@
   }
 </style>
 
-<div class="gen"><a class="gen-text"><span id="output"/>test</a></div>
+<div class="gen"><a class="gen-text"><span id="output"/>Invalid Input</a></div>
 
 <script>
 var segment = 1;
 
 function redirect() {
   var location = window.location;
-  var text = location.pathname.split("/")[
-    segment + 1
-  ];
+  var text = String(location.pathname.split("/")[segment + 1]);
   console.log(text);
+  text = text.replace("+", " ");
   document.getElementById("output").innerHTML = text;
 }
 

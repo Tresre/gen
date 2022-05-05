@@ -53,10 +53,11 @@ function redirect() {
     document.getElementById("output").innerHTML = output;
     if (splitInput[1] !== "muted") {
       window.speechSynthesis.cancel();
-      var msg = new SpeechSynthesisUtterance();
+      let msg = new SpeechSynthesisUtterance();
+      msg.lang = 'en-US';
       msg.text = String(output);
-      console.log(msg);
       msg.volume = 1;
+      console.log(msg);
       window.speechSynthesis.speak(msg);
     }
   }

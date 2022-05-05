@@ -51,6 +51,12 @@ function redirect() {
     output = splitInput[0];
     output = output.replaceAll("+", " ");
     document.getElementById("output").innerHTML = output;
+    if (splitInput[1] !== "muted") {
+      window.speechSynthesis.cancel();
+      var msg = new SpeechSynthesisUtterance();
+      msg.text = output;
+      window.speechSynthesis.speak(msg);
+    }
   }
 }
 

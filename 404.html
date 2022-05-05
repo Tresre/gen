@@ -40,13 +40,16 @@ var segment = 1;
 function redirect() {
   var location = window.location;
   var text = String(location.pathname.split("/")[segment + 1]);
-  const splitText = text.split(".");
-  output = splitText[0];
-  console.log(output);
-  console.log("0" + splitText[0]);
-  console.log("1" + splitText[1]);
-  output = output.replace(/$/g, " ");
-  document.getElementById("output").innerHTML = output;
+  const splitText = text.split("=");
+  if (check[0] == "output") {
+    output = splitText[1];
+    const splitOutput = output.split(".");
+    console.log(output);
+    console.log("0" + splitOutput[0]);
+    console.log("1" + splitOutput[1]);
+    output = output.replace(/$/g, " ");
+    document.getElementById("output").innerHTML = output;
+  }
 }
 
 redirect();

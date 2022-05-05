@@ -57,6 +57,8 @@ function redirect() {
       msg.lang = 'en-US';
       msg.text = String(output);
       msg.volume = 1;
+      msg.pitch = 1;
+      msg.rate = 1;
       console.log(msg);
       window.speechSynthesis.speak(msg);
     }

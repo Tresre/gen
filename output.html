@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+  @import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro);
+  html {
+    background-color: #1e1e1e;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+  .gen {
+  	position: relative;
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 95%;
+    max-width: 800px;
+    height: 250px;
+    top: 100px;
+    border: 7px solid #2196F3;
+    background: #323232;
+    border-radius: 7px;
+  }
+  .gen-text {
+  	position: relative;
+    font-size: 20px;
+    font-family: Source Code Pro;
+    font-weight: 600;
+    color: white;
+    top: 50px;
+  }
+</style>
+
+<div class="gen"><a class="gen-text"><span id="output"/>test</a></div>
+
+<script>
+var segment = 1;
+
+function redirect() {
+  var location = window.location;
+  var text = location.pathname.split("/")[
+    segment + 1
+  ];
+  console.log(text);
+  document.getElementById("output").innerHTML = text;
+}
+
+redirect();
+</script>
+
+</html>

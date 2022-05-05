@@ -38,14 +38,15 @@
 var segment = 1;
 
 function redirect() {
-  var a = location.href; 
-  var b = a.substring(a.indexOf("?")+1);
-  console.log(b);
   var location = window.location;
   var text = String(location.pathname.split("/")[segment + 1]);
   console.log("test" + text);
   const splitText = text.split("=");
   if (splitText[0] == "output") {
+    var atest = location.href; 
+    var btest = atest.substring(atest.indexOf("?")+1);
+    console.log("btest" + btest);
+  
     input = splitText[1];
     const splitInput = input.split(".");
     console.log(output);

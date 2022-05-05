@@ -2,3 +2,5 @@ window.speechSynthesis.cancel();
 var msg = new SpeechSynthesisUtterance();
 msg.text = "";
 window.speechSynthesis.speak(msg);
+
+https://tresre.dev/gen/result?output=This+is+a+test+message!

@@ -43,11 +43,12 @@ function redirect() {
   console.log("test" + text);
   const splitText = text.split("=");
   if (splitText[0] == "output") {
-    output = splitText[1];
-    const splitOutput = output.split(".");
+    input = splitText[1];
+    const splitInput = input.split(".");
     console.log(output);
-    console.log("0" + splitOutput[0]);
-    console.log("1" + splitOutput[1]);
+    console.log("0" + splitInput[0]);
+    console.log("1" + splitInput[1]);
+    output = splitInput[1];
     output = output.replace(/$/g, " ");
     document.getElementById("output").innerHTML = output;
   }

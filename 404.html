@@ -40,8 +40,9 @@ var segment = 1;
 function redirect() {
   var location = window.location;
   var text = String(location.pathname.split("/")[segment + 1]);
+  console.log("test" + text);
   const splitText = text.split("=");
-  if (check[0] == "output") {
+  if (splitText[0] == "output") {
     output = splitText[1];
     const splitOutput = output.split(".");
     console.log(output);

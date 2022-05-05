@@ -54,7 +54,7 @@ function redirect() {
     if (splitInput[1] !== "muted") {
       window.speechSynthesis.cancel();
       var msg = new SpeechSynthesisUtterance();
-      msg.text = output;
+      msg.text = String(output);
       window.speechSynthesis.speak(msg);
     }
   }

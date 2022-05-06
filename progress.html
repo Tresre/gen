@@ -112,14 +112,18 @@ var button3;
 var button4;
 var button5;
 var stage = 0;
+var display;
 
 button1 = randomNoun();
 document.getElementById("button1").innerHTML = button1;
 
 function button(id) {
+  if (display == undefined) {display = "";}
   if (stage == 0) {
     var noun = window[id];
-    document.getElementById("display").innerHTML = noun;
+    var displaypre = display.concat(" " + noun);
+    display = displaypre;
+    document.getElementById("display").innerHTML = display;
   }
 }
 

@@ -39,7 +39,8 @@ var segment = 1;
 
 function redirect() {
   var hidden = window.location.href; 
-  var text = String(hidden.substring(hidden.indexOf("?")+1));
+  var url = hidden.substring(hidden.indexOf("?")+1);
+  var text = String(url);
   console.log("test" + text);
   const splitText = text.split("=");
   if (splitText[0] == "output") {

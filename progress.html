@@ -121,8 +121,7 @@ function button(id) {
   if (display == undefined) {display = "";}
   if (stage == 0) {
     var noun = window[id];
-    var displaypre = display.concat(" " + noun);
-    display = displaypre;
+    display = display.concat(" " + noun);
     document.getElementById("display").innerHTML = display;
   }
 }

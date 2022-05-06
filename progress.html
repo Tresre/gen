@@ -138,11 +138,32 @@ function button(id) {
     document.getElementById("display").innerHTML = display;
     nextStage();
   }
-  
+  if (stage == 1) {
+  	var choice = window[id];
+    const splitSemantic = choice.split("[");
+    plural = splitSemantic[1];
+    console.log("plural " + plural);
+    display = display.concat("" + splitSemantic[0]);
+    document.getElementById("display").innerHTML = display;
+    nextStage();
+  }
 }
 
 function nextStage() {
   if (stage == 0) {
+	stage = 2;
+    button1 = randomVerb();
+    document.getElementById("button1").innerHTML = button1;
+    button2 = randomVerb();
+    document.getElementById("button2").innerHTML = button2;
+    button3 = randomVerb();
+    document.getElementById("button3").innerHTML = button3;
+    button4 = randomVerb();
+    document.getElementById("button4").innerHTML = button4;
+    button5 = randomVerb();
+    document.getElementById("button5").innerHTML = button5;
+  }
+  if (stage == 1) {
 	++stage;
     button1 = randomVerb();
     document.getElementById("button1").innerHTML = button1;

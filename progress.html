@@ -90,15 +90,15 @@
     
 <div class="buttonContainer">
     
-    <a class="button" onclick="button(1)"><span class="button-text" id="button1">Option 1</span></a>
+    <a class="button" onclick="button('button1')"><span class="button-text" id="button1">Option 1</span></a>
     <br>
-    <a class="button" onclick="button(2)"><span class="button-text" id="button2">Option 2</span></a>
+    <a class="button" onclick="button('button2')"><span class="button-text" id="button2">Option 2</span></a>
     <br>
-    <a class="button" onclick="button(3)"><span class="button-text" id="button3">Option 3</span></a>
+    <a class="button" onclick="button('button3')"><span class="button-text" id="button3">Option 3</span></a>
     <br>
-    <a class="button" onclick="button(4)"><span class="button-text" id="button4">Option 4</span></a>
+    <a class="button" onclick="button('button4')"><span class="button-text" id="button4">Option 4</span></a>
     <br>
-    <a class="button" onclick="button(5)"><span class="button-text" id="button5">Option 5</span></a>
+    <a class="button" onclick="button('button5')"><span class="button-text" id="button5">Option 5</span></a>
   
 </div>
 <div style="height:80px;"></div>
@@ -106,18 +106,36 @@
 <script src="https://tresre.dev/insult/assets/options.js"></script>
 
 <script>
-console.log("loaded");
 var button1;
+var button2;
+var button3;
+var button4;
+var button5;
+var stage = 0;
+
+button1 = randomNoun();
+document.getElementById("button1").innerHTML = button1;
 
 function button(id) {
-  var noun = randomNoun();
-  console.log("RANDOM" + randomNoun);
-  document.getElementById("display").innerHTML = noun;
+  if (stage == 0) {
+    var noun = window[id];
+    document.getElementById("display").innerHTML = noun;
+  }
 }
+
 
 function randomNoun() {
   var random = nouns[Math.floor(Math.random()*nouns.length)];
-  console.log("CHOOSE " + random);
+  return random;
+}
+
+function randomVerb() {
+  var random = verbs[Math.floor(Math.random()*verbs.length)];
+  return random;
+}
+
+function randomEnd() {
+  var random = end[Math.floor(Math.random()*end.length)];
   return random;
 }
 </script>

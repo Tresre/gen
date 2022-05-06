@@ -120,7 +120,7 @@ document.getElementById("button1").innerHTML = button1;
 function button(id) {
   if (display == undefined) {display = "";}
   if (stage == 0) {
-    var noun = window[id];
+    var noun = capitalizeFirstLetter(window[id]);
     display = display.concat(" " + noun);
     document.getElementById("display").innerHTML = display;
   }
@@ -140,6 +140,10 @@ function randomVerb() {
 function randomEnd() {
   var random = end[Math.floor(Math.random()*end.length)];
   return random;
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 </script>
 

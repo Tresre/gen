@@ -119,6 +119,18 @@ var next;
 button1 = randomNoun();
 document.getElementById("button1").innerHTML = button1;
 
+button2 = randomNoun();
+document.getElementById("button2").innerHTML = button2;
+
+button3 = randomNoun();
+document.getElementById("button3").innerHTML = button3;
+
+button4 = randomNoun();
+document.getElementById("button4").innerHTML = button4;
+
+button5 = randomNoun();
+document.getElementById("button5").innerHTML = button5;
+
 function button(id) {
   if (display == undefined) {display = "";}
   if (stage == 0) {
@@ -128,7 +140,12 @@ function button(id) {
     console.log("plural " + plural);
     display = display.concat("" + splitSemantic[0]);
     document.getElementById("display").innerHTML = display;
+    nextStage();
   }
+}
+
+function nextStage() {
+
 }
 
 

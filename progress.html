@@ -122,8 +122,11 @@ document.getElementById("button1").innerHTML = button1;
 function button(id) {
   if (display == undefined) {display = "";}
   if (stage == 0) {
-    var noun = capitalizeFirstLetter(window[id]);
-    display = display.concat(" " + noun);
+    var choice = capitalizeFirstLetter(window[id]);
+    const splitSemantic = choice.split("[");
+    plural = splitSemantic[1];
+    console.log("plural " + plural);
+    display = display.concat("" + splitSemantic[0]);
     document.getElementById("display").innerHTML = display;
   }
 }

@@ -203,11 +203,20 @@ function populateButtons(part) {
 
 function randomNoun() {
   var random = nouns[Math.floor(Math.random()*nouns.length)];
-  return random;
+  const splitRandom = random.split("[");
+  console.log(splitRandom);
+  plural = splitRandom[1];
+  return splitRandom[0];
 }
 
 function randomVerb() {
   var random = verbs[Math.floor(Math.random()*verbs.length)];
+  if (random.includes("]") == true) {
+  
+  }
+  if (random.includes("{") == true) {
+  
+  }
   return random;
 }
 

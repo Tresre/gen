@@ -281,14 +281,6 @@ function finishGame() {
   location.replace("https://tresre.dev/insult/result?output=" + url)
 }
 
-var hidden = window.location.href; 
-var checkurl = hidden.substring(hidden.indexOf("?")+1);
-var urltext = String(checkurl);
-console.log("?" + urltext);
-if (text == "auto") {
-  autoGenerate();
-}
-
 function autoGenerate() {
   setInterval(function() {
     autogen = Math.floor(Math.random() * 5) + 1;

@@ -108,7 +108,7 @@ verbs = [
   "belongs/belong] in a cage {end",
   "bothers/bother] me {end",
   "brings/bring] insults to a sword fight {end",
-  "can/can] be found in Pokémon GO {end",
+  "can/can] be found in Pokemon GO {end",
   "cant/cant] dance {end",
   "cant/cant] exercise because of {noun",
   "cant/cant] hold liquor {end",

@@ -282,7 +282,10 @@ function finishGame() {
 }
 
 function autoGenerate() {
-  setInterval(button("button1"), 0);
+  setInterval(function() {
+    autogen = Math.floor(Math.random() * 5) + 1;
+    button("button" + autogen)
+  }, 5)
 }
 
 function randomNoun() {

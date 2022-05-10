@@ -155,10 +155,14 @@ function button(id) {
   }
   if (stage == 3) {
   	var choice = window[id];
-    display = display.concat("" + choice);
-    document.getElementById("display").innerHTML = display;
-    nextStage();
-    return;
+    if (choice == "and") {
+      
+    } else {
+      display = display.concat("" + choice);
+      document.getElementById("display").innerHTML = display;
+      nextStage();
+      return;
+    }
   }
   if (stage == 4) {
   }

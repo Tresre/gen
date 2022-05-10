@@ -178,7 +178,7 @@ end = [
   "and thats a load of bollocks!",
   "and thats racist!",
   "and you cant deny it!",
-  "and you know it's true!",
+  "and you know its true!",
   "because you dont exist!",
   "because you are a spoiled brat!",
   "I bet!",

@@ -292,7 +292,15 @@ function nextStage() {
   	return;
   }
   if (stage == 4) {
-  
+  	if (next == "noun") {
+	  stage = 5;  
+    }
+    if (next == "verb") {
+      stage = 2;
+    }
+    if (next == "end") {
+      stage = 3;
+    }
   	return;
   }
   if (stage == 5) {

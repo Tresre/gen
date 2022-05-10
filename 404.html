@@ -1,74 +1,10 @@
 <!DOCTYPE html>
 <html>
-
-<style>
-  @import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro);
-  html {
-    background-color: #1e1e1e;
-    -webkit-user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-  }
-  .gen {
-    position: relative;
-    display: block;
-    margin: auto;
-    text-align: center;
-    width: 95%;
-    max-width: 800px;
-    height: auto;
-    top: 100px;
-    border: 7px solid #2196F3;
-    background: #323232;
-    border-radius: 7px;
-    padding-top: 75px;
-    padding-bottom: 75px;
-    font-size: 20px;
-    font-family: Source Code Pro;
-    font-weight: 600;
-    color: white;
-  }
-
-</style>
+<link rel="stylesheet" media="screen" href="assets/css/404.css">
+<style>@import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro);</style>
 
 <div class="gen"><a class="gen-text"><span id="output"/>Invalid Input</a></div>
 
-<script>
-var segment = 1;
+<script src="assets/js/404.js"></script>
 
-function redirect() {
-  var hidden = window.location.href; 
-  var url = hidden.substring(hidden.indexOf("?")+1);
-  var text = String(url);
-  console.log("test" + text);
-  const splitText = text.split("=");
-  if (splitText[0] == "output") {
-    input = splitText[1];
-    const splitInput = input.split(".");
-    console.log(output);
-    console.log("0" + splitInput[0]);
-    console.log("1" + splitInput[1]);
-    output = splitInput[0];
-    output = output.replaceAll("+", " ");
-    document.getElementById("output").innerHTML = output;
-    if (splitInput[1] !== "muted") {
-      window.speechSynthesis.cancel();
-      let utter = new SpeechSynthesisUtterance(output);
-      utter.lang = "en";
-      var voices = window.speechSynthesis.getVoices();
-	  utter.voice = voices[0]; 
-      utter.volume = 1;
-      utter.rate = 1;
-      utter.pitch = 1;
-      utter.text = output;
-      console.log(utter);
-      setTimeout(function() {
-        window.speechSynthesis.speak(utter);
-      }, 1000);
-    }
-  }
-}
-
-redirect();
-</script>
 </html>

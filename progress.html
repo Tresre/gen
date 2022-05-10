@@ -249,46 +249,12 @@ function button(id) {
 function nextStage() {
   if (stage == 0) {
     stage = 2;
-    button1 = randomVerb();
-    splitVerb = button1.split("]");
-    splitPlurality = (splitVerb[0]).split("/");
-    plurality = splitPlurality[(plural - 1)];
-    splitVerb1 = (splitVerb[1]).split("{");
-    document.getElementById("button1").innerHTML = (plurality + splitVerb1[0]);
-    
-    button2 = randomVerb();
-    splitVerb = button2.split("]");
-    splitPlurality = (splitVerb[0]).split("/");
-    plurality = splitPlurality[(plural - 1)];
-    splitVerb1 = (splitVerb[1]).split("{");
-    document.getElementById("button2").innerHTML = (plurality + splitVerb1[0]);
-    
-    button3 = randomVerb();
-    splitVerb = button3.split("]");
-    splitPlurality = (splitVerb[0]).split("/");
-    plurality = splitPlurality[(plural - 1)];
-    splitVerb1 = (splitVerb[1]).split("{");
-    document.getElementById("button3").innerHTML = (plurality + splitVerb1[0]);
-    
-    button4 = randomVerb();
-    splitVerb = button4.split("]");
-    splitPlurality = (splitVerb[0]).split("/");
-    plurality = splitPlurality[(plural - 1)];
-    splitVerb1 = (splitVerb[1]).split("{");
-    document.getElementById("button4").innerHTML = (plurality + splitVerb1[0]);
-    
-    button5 = randomVerb();
-    splitVerb = button5.split("]");
-    splitPlurality = (splitVerb[0]).split("/");
-    plurality = splitPlurality[(plural - 1)];
-    splitVerb1 = (splitVerb[1]).split("{");
-    document.getElementById("button5").innerHTML = (plurality + splitVerb1[0]);
-    
+    populateButtons("verb");
     return;
   }
   if (stage == 1) {
     stage = 2;
-    populateButtons(verb);
+    populateButtons("verb");
     return;
   }
   if (stage == 2) {
@@ -317,40 +283,7 @@ function nextStage() {
     }
     if (next == "verb") {
       stage = 2;
-      button1 = randomVerb();
-      splitVerb = button1.split("]");
-      splitPlurality = (splitVerb[0]).split("/");
-      plurality = splitPlurality[(plural - 1)];
-      splitVerb1 = (splitVerb[1]).split("{");
-      document.getElementById("button1").innerHTML = (plurality + splitVerb1[0]);
-
-      button2 = randomVerb();
-      splitVerb = button2.split("]");
-      splitPlurality = (splitVerb[0]).split("/");
-      plurality = splitPlurality[(plural - 1)];
-      splitVerb1 = (splitVerb[1]).split("{");
-      document.getElementById("button2").innerHTML = (plurality + splitVerb1[0]);
-
-      button3 = randomVerb();
-      splitVerb = button3.split("]");
-      splitPlurality = (splitVerb[0]).split("/");
-      plurality = splitPlurality[(plural - 1)];
-      splitVerb1 = (splitVerb[1]).split("{");
-      document.getElementById("button3").innerHTML = (plurality + splitVerb1[0]);
-
-      button4 = randomVerb();
-      splitVerb = button4.split("]");
-      splitPlurality = (splitVerb[0]).split("/");
-      plurality = splitPlurality[(plural - 1)];
-      splitVerb1 = (splitVerb[1]).split("{");
-      document.getElementById("button4").innerHTML = (plurality + splitVerb1[0]);
-
-      button5 = randomVerb();
-      splitVerb = button5.split("]");
-      splitPlurality = (splitVerb[0]).split("/");
-      plurality = splitPlurality[(plural - 1)];
-      splitVerb1 = (splitVerb[1]).split("{");
-      document.getElementById("button5").innerHTML = (plurality + splitVerb1[0]);
+      populateButtons("verb");
       return;
     }
     if (next == "end") {
@@ -392,15 +325,39 @@ function populateButtons(part) {
   }
   if (part == "verb") {
     button1 = randomVerb();
-    document.getElementById("button1").innerHTML = button1;
+    splitVerb = button1.split("]");
+    splitPlurality = (splitVerb[0]).split("/");
+    plurality = splitPlurality[(plural - 1)];
+    splitVerb1 = (splitVerb[1]).split("{");
+    document.getElementById("button1").innerHTML = (plurality + splitVerb1[0]);
+    
     button2 = randomVerb();
-    document.getElementById("button2").innerHTML = button2;
+    splitVerb = button2.split("]");
+    splitPlurality = (splitVerb[0]).split("/");
+    plurality = splitPlurality[(plural - 1)];
+    splitVerb1 = (splitVerb[1]).split("{");
+    document.getElementById("button2").innerHTML = (plurality + splitVerb1[0]);
+    
     button3 = randomVerb();
-    document.getElementById("button3").innerHTML = button3;
+    splitVerb = button3.split("]");
+    splitPlurality = (splitVerb[0]).split("/");
+    plurality = splitPlurality[(plural - 1)];
+    splitVerb1 = (splitVerb[1]).split("{");
+    document.getElementById("button3").innerHTML = (plurality + splitVerb1[0]);
+    
     button4 = randomVerb();
-    document.getElementById("button4").innerHTML = button4;
+    splitVerb = button4.split("]");
+    splitPlurality = (splitVerb[0]).split("/");
+    plurality = splitPlurality[(plural - 1)];
+    splitVerb1 = (splitVerb[1]).split("{");
+    document.getElementById("button4").innerHTML = (plurality + splitVerb1[0]);
+    
     button5 = randomVerb();
-    document.getElementById("button5").innerHTML = button5;
+    splitVerb = button5.split("]");
+    splitPlurality = (splitVerb[0]).split("/");
+    plurality = splitPlurality[(plural - 1)];
+    splitVerb1 = (splitVerb[1]).split("{");
+    document.getElementById("button5").innerHTML = (plurality + splitVerb1[0]);
   }
   if (part == "end") {
     button1 = randomEnd();

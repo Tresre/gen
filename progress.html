@@ -196,6 +196,28 @@ function button(id) {
     }
   }
   if (stage == 4) {
+  	var choice = window[id];
+    const buttonChoice = id.split("button");
+    if (buttonChoice[1] < 4) {
+      const splitSemantic = choice.split("]");
+      const splitSemantic1 = (splitSemantic[1]).split("{");
+      next = splitSemantic1[1];
+      console.log("next " + next);
+      splitPlurality = (splitSemantic[0]).split("/");
+      plurality = splitPlurality[(plural - 1)];
+      display = display.concat("" + plurality + splitSemantic1[0]);
+      document.getElementById("display").innerHTML = display;
+      nextStage();
+      return;
+    } else {
+      const splitSemantic = choice.split("[");
+      console.log("plural " + plural);
+      display = display.concat("" + splitSemantic[0]);
+      document.getElementById("display").innerHTML = display;
+      next = end;
+      nextStage();
+      return;
+    }
   }
   if (stage == 5) {
   	var choice = window[id];

@@ -282,8 +282,9 @@ function finishGame() {
 }
 
 var hidden = window.location.href; 
-var url = hidden.substring(hidden.indexOf("?")+1);
-var text = String(url);
+var checkurl = hidden.substring(hidden.indexOf("?")+1);
+var urltext = String(checkurl);
+console.log("?" + urltext);
 if (text == "auto") {
   autoGenerate();
 }

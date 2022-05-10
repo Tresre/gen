@@ -15,7 +15,7 @@
   <div style="height:80px;"></div>
 </body>
 <script>
-titleMusic();
+document.onload = (function(){titleMusic();});
 function titleMusic() {
   music = new Audio('https://tresre.dev/insult/assets/mp3/TitleMusic.mp3');
   music.play();

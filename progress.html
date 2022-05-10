@@ -153,6 +153,23 @@ function button(id) {
     nextStage();
     return;
   }
+  if (stage == 3) {
+  	var choice = window[id];
+    display = display.concat("" + choice);
+    document.getElementById("display").innerHTML = display;
+    nextStage();
+    return;
+  }
+  if (stage == 4) {
+  }
+  if (stage == 5) {
+  	var choice = window[id];
+    const splitSemantic = choice.split("[");
+    display = display.concat("" + splitSemantic[0]);
+    document.getElementById("display").innerHTML = display;
+    nextStage();
+    return;
+  }
 }
 
 function nextStage() {
@@ -192,10 +209,13 @@ function nextStage() {
     plurality = splitPlurality[(plural - 1)];
     splitVerb1 = (splitVerb[1]).split("{");
     document.getElementById("button5").innerHTML = (plurality + splitVerb1[0]);
+    
+    return;
   }
   if (stage == 1) {
 	stage = 2;
     populateButtons(verb);
+    return;
   }
   if (stage == 2) {
   	console.log("testnext " + next);
@@ -207,6 +227,20 @@ function nextStage() {
       stage = 5;
       populateButtons("noun");
     }
+    return;
+  }
+  if (stage == 3) {
+  
+  	return;
+  }
+  if (stage == 4) {
+  
+  	return;
+  }
+  if (stage == 5) {
+  	stage = 3;
+    populateButtons("end");
+    return;
   }
 }
 

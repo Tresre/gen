@@ -4,10 +4,6 @@
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
   }
-  * {
-    margin: 0;
-    padding: 0;
-  }
   .gen {
     position: relative;
     display: block;
@@ -62,4 +58,5 @@
   }
   .button:active {
     transform: scale(0.95);
-    background-color:
+    background-color: #2196F3;
+  }

@@ -146,7 +146,13 @@ function nextStage() {
     button1 = randomVerb();
     const splitVerb = button1.split("]");
     const splitPlurality = (splitVerb[0]).split("/");
-    var plurality = splitPlurality[(plural - 1)];
+    console.log("splitplur " + splitPlurality);
+    if (splitPlurality[0] == undefined) {
+    	var plurality = "";
+    } else {
+    	var plurality = splitPlurality[(plural - 1)];
+    }
+    console.log(plurality);
     const splitVerb1 = (splitVerb[1]).split("{");
     document.getElementById("button1").innerHTML = (plurality + splitVerb1[0]);
     

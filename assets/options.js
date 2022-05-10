@@ -92,7 +92,7 @@ verbs = [
   "was/were] born in {noun",
   "was/were] burnt like a witch {noun",
   "was/were] defeated by {noun",
-  "was/were] in jail {noun",
+  "was/were] in jail {end",
   "was/were] owned by {noun",
   "has/have] a steaming romp with {noun",
   "has/have] an unsightly face {end",

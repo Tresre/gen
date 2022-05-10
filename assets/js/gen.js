@@ -281,6 +281,10 @@ function finishGame() {
   location.replace("https://tresre.dev/insult/result?output=" + url)
 }
 
+function autoGenerate() {
+  setInterval(button("button1"), 0);
+}
+
 function randomNoun() {
   var random = nouns[Math.floor(Math.random()*nouns.length)];
   return random;

@@ -16,18 +16,9 @@ function redirect() {
     output = output.replaceAll("+", " ");
     document.getElementById("output").innerHTML = output;
     if (splitInput[1] !== "muted") {
-      window.speechSynthesis.cancel();
-      let utter = new SpeechSynthesisUtterance(output);
-      utter.lang = "en";
-      var voices = window.speechSynthesis.getVoices();
-	  utter.voice = voices[0]; 
-      utter.volume = 1;
-      utter.rate = 1;
-      utter.pitch = 1;
-      utter.text = output;
-      console.log(utter);
+      console.log(output);
       setTimeout(function() {
-        window.speechSynthesis.speak(utter);
+        window.speechSynthesis.speak(new SpeechSynthesisUtterance(output));
       }, 1000);
     }
   }

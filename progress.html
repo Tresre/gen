@@ -146,7 +146,7 @@ function button(id) {
     return;
   }
   if (stage == 1) {
-  	var choice = window[id];
+    var choice = window[id];
     const splitSemantic = choice.split("[");
     console.log("plural " + plural);
     display = display.concat("" + splitSemantic[0]);
@@ -155,7 +155,7 @@ function button(id) {
     return;
   }
   if (stage == 2) {
-  	var choice = window[id];
+    var choice = window[id];
     const splitSemantic = choice.split("]");
     const splitSemantic1 = (splitSemantic[1]).split("{");
     next = splitSemantic1[1];
@@ -168,7 +168,7 @@ function button(id) {
     return;
   }
   if (stage == 3) {
-  	var choice = window[id];
+    var choice = window[id];
     if (choice == "and") {
       stage = 4;
       ++and;
@@ -212,7 +212,7 @@ function button(id) {
     }
   }
   if (stage == 4) {
-  	var choice = window[id];
+    var choice = window[id];
     const buttonChoice = id.split("button");
     if (buttonChoice[1] < 4) {
       const splitSemantic = choice.split("]");
@@ -237,7 +237,7 @@ function button(id) {
     }
   }
   if (stage == 5) {
-  	var choice = window[id];
+    var choice = window[id];
     const splitSemantic = choice.split("[");
     display = display.concat("" + splitSemantic[0]);
     document.getElementById("display").innerHTML = display;
@@ -248,7 +248,7 @@ function button(id) {
 
 function nextStage() {
   if (stage == 0) {
-	stage = 2;
+    stage = 2;
     button1 = randomVerb();
     splitVerb = button1.split("]");
     splitPlurality = (splitVerb[0]).split("/");
@@ -287,13 +287,13 @@ function nextStage() {
     return;
   }
   if (stage == 1) {
-	stage = 2;
+    stage = 2;
     populateButtons(verb);
     return;
   }
   if (stage == 2) {
-  	console.log("testnext " + next);
-  	if (next == "end") {
+    console.log("testnext " + next);
+    if (next == "end") {
       stage = 3;
       populateButtons("end");
       return;
@@ -306,12 +306,12 @@ function nextStage() {
     return;
   }
   if (stage == 3) {
-  	finishGame();
-  	return;
+    finishGame();
+    return;
   }
   if (stage == 4) {
-  	if (next == "noun") {
-	  stage = 5;
+    if (next == "noun") {
+      stage = 5;
       populateButtons("noun");
       return;
     }
@@ -358,10 +358,10 @@ function nextStage() {
       populateButtons("end");
       return;
     }
-  	return;
+    return;
   }
   if (stage == 5) {
-  	stage = 3;
+    stage = 3;
     populateButtons("end");
     return;
   }
@@ -391,7 +391,7 @@ function populateButtons(part) {
     document.getElementById("button5").innerHTML = splitButton5[0];
   }
   if (part == "verb") {
-  	button1 = randomVerb();
+    button1 = randomVerb();
     document.getElementById("button1").innerHTML = button1;
     button2 = randomVerb();
     document.getElementById("button2").innerHTML = button2;
@@ -403,7 +403,7 @@ function populateButtons(part) {
     document.getElementById("button5").innerHTML = button5;
   }
   if (part == "end") {
-  	button1 = randomEnd();
+    button1 = randomEnd();
     document.getElementById("button1").innerHTML = button1;
     button2 = randomEnd();
     document.getElementById("button2").innerHTML = button2;
@@ -434,12 +434,6 @@ function randomNoun() {
 
 function randomVerb() {
   var random = verbs[Math.floor(Math.random()*verbs.length)];
-  if (random.includes("]") == true) {
-  
-  }
-  if (random.includes("{") == true) {
-  
-  }
   return random;
 }
 

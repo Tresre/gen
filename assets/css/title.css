@@ -1,3 +1,13 @@
+  html {
+    background-color: #1e1e1e;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
   .gen {
     position: relative;
     display: block;

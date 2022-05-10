@@ -129,6 +129,7 @@ function button(id) {
     console.log("plural " + plural);
     document.getElementById("display").innerHTML = display;
     nextStage();
+    return;
   }
   if (stage == 1) {
   	var choice = window[id];
@@ -137,6 +138,20 @@ function button(id) {
     display = display.concat("" + splitSemantic[0]);
     document.getElementById("display").innerHTML = display;
     nextStage();
+    return;
+  }
+  if (stage == 2) {
+  	var choice = window[id];
+    const splitSemantic = choice.split("]");
+    const splitSemantic1 = (splitSemantic[1]).split("{");
+    next = splitSemantic1[1];
+    console.log("next " + next);
+    splitPlurality = (splitSemantic[0]).split("/");
+    plurality = splitPlurality[(plural - 1)];
+    display = display.concat("" + plurality + splitSemantic1[0]);
+    document.getElementById("display").innerHTML = display;
+    nextStage();
+    return;
   }
 }
 

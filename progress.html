@@ -306,7 +306,7 @@ function nextStage() {
     return;
   }
   if (stage == 3) {
-  	alert("You finished!");
+  	finishGame();
   	return;
   }
   if (stage == 4) {
@@ -419,6 +419,12 @@ function populateButtons(part) {
       document.getElementById("button5").innerHTML = button5;
     }
   }
+}
+
+function finishGame() {
+  var url = display;
+  url = url.replaceAll(" ", "+");
+  location.replace("https://tresre.dev/gen/result?output=" + url)
 }
 
 function randomNoun() {

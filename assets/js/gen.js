@@ -285,7 +285,7 @@ function autoGenerate() {
   setInterval(function() {
     autogen = Math.floor(Math.random() * 5) + 1;
     button("button" + autogen)
-  }, 1000)
+  }, 250)
 }
 
 function randomNoun() {

@@ -188,6 +188,7 @@ function button(id) {
       button5 = randomNoun();
       const splitButton5 = button5.split("[");
       document.getElementById("button5").innerHTML = splitButton5[0];
+      return;
     } else {
       display = display.concat("" + choice);
       document.getElementById("display").innerHTML = display;
@@ -280,10 +281,12 @@ function nextStage() {
   	if (next == "end") {
       stage = 3;
       populateButtons("end");
+      return;
     }
     if (next == "noun") {
       stage = 5;
       populateButtons("noun");
+      return;
     }
     return;
   }
@@ -299,7 +302,40 @@ function nextStage() {
     }
     if (next == "verb") {
       stage = 2;
-      populateButtons("verb");
+      button1 = randomVerb();
+      splitVerb = button1.split("]");
+      splitPlurality = (splitVerb[0]).split("/");
+      plurality = splitPlurality[(plural - 1)];
+      splitVerb1 = (splitVerb[1]).split("{");
+      document.getElementById("button1").innerHTML = (plurality + splitVerb1[0]);
+
+      button2 = randomVerb();
+      splitVerb = button2.split("]");
+      splitPlurality = (splitVerb[0]).split("/");
+      plurality = splitPlurality[(plural - 1)];
+      splitVerb1 = (splitVerb[1]).split("{");
+      document.getElementById("button2").innerHTML = (plurality + splitVerb1[0]);
+
+      button3 = randomVerb();
+      splitVerb = button3.split("]");
+      splitPlurality = (splitVerb[0]).split("/");
+      plurality = splitPlurality[(plural - 1)];
+      splitVerb1 = (splitVerb[1]).split("{");
+      document.getElementById("button3").innerHTML = (plurality + splitVerb1[0]);
+
+      button4 = randomVerb();
+      splitVerb = button4.split("]");
+      splitPlurality = (splitVerb[0]).split("/");
+      plurality = splitPlurality[(plural - 1)];
+      splitVerb1 = (splitVerb[1]).split("{");
+      document.getElementById("button4").innerHTML = (plurality + splitVerb1[0]);
+
+      button5 = randomVerb();
+      splitVerb = button5.split("]");
+      splitPlurality = (splitVerb[0]).split("/");
+      plurality = splitPlurality[(plural - 1)];
+      splitVerb1 = (splitVerb[1]).split("{");
+      document.getElementById("button5").innerHTML = (plurality + splitVerb1[0]);
       return;
     }
     if (next == "end") {

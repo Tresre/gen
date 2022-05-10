@@ -158,11 +158,25 @@ function nextStage() {
     document.getElementById("button2").innerHTML = (plurality + splitVerb1[0]);
     
     button3 = randomVerb();
-    document.getElementById("button3").innerHTML = button3;
+    splitVerb = button3.split("]");
+    splitPlurality = (splitVerb[0]).split("/");
+    plurality = splitPlurality[(plural - 1)];
+    splitVerb1 = (splitVerb[1]).split("{");
+    document.getElementById("button3").innerHTML = (plurality + splitVerb1[0]);
+    
     button4 = randomVerb();
-    document.getElementById("button4").innerHTML = button4;
+    splitVerb = button4.split("]");
+    splitPlurality = (splitVerb[0]).split("/");
+    plurality = splitPlurality[(plural - 1)];
+    splitVerb1 = (splitVerb[1]).split("{");
+    document.getElementById("button4").innerHTML = (plurality + splitVerb1[0]);
+    
     button5 = randomVerb();
-    document.getElementById("button5").innerHTML = button5;
+    splitVerb = button5.split("]");
+    splitPlurality = (splitVerb[0]).split("/");
+    plurality = splitPlurality[(plural - 1)];
+    splitVerb1 = (splitVerb[1]).split("{");
+    document.getElementById("button5").innerHTML = (plurality + splitVerb1[0]);
   }
   if (stage == 1) {
 	stage = 2;

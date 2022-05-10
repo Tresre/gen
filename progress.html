@@ -214,7 +214,8 @@ function button(id) {
       console.log("plural " + plural);
       display = display.concat("" + splitSemantic[0]);
       document.getElementById("display").innerHTML = display;
-      next = end;
+      next = "verb";
+      console.log("next " + next);
       nextStage();
       return;
     }

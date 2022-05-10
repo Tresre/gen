@@ -112,7 +112,25 @@ var plural;
 var next;
 var and = 0;
 
-populateButtons("noun");
+button1 = randomNoun();
+const splitButton1 = button1.split("[");
+document.getElementById("button1").innerHTML = capitalizeFirstLetter(splitButton1[0]);
+
+button2 = randomNoun();
+const splitButton2 = button2.split("[");
+document.getElementById("button2").innerHTML = capitalizeFirstLetter(splitButton2[0]);
+
+button3 = randomNoun();
+const splitButton3 = button3.split("[");
+document.getElementById("button3").innerHTML = capitalizeFirstLetter(splitButton3[0]);
+
+button4 = randomNoun();
+const splitButton4 = button4.split("[");
+document.getElementById("button4").innerHTML = capitalizeFirstLetter(splitButton4[0]);
+
+button5 = randomNoun();
+const splitButton5 = button5.split("[");
+document.getElementById("button5").innerHTML = capitalizeFirstLetter(splitButton5[0]);
 
 function button(id) {
   if (display == undefined) {display = "";}

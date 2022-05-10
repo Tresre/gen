@@ -102,7 +102,9 @@ function button(id) {
       document.getElementById("button5").innerHTML = splitButton5[0];
       return;
     } else {
-      display = display.concat("" + choice);
+      var comma = display;
+      comma = comma.slice(0, -1);
+      display = display.concat(", " + choice);
       document.getElementById("display").innerHTML = display;
       nextStage();
       return;

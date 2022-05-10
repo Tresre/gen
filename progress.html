@@ -200,10 +200,12 @@ function nextStage() {
   if (stage == 2) {
   	console.log("testnext " + next);
   	if (next == "end") {
+      stage = 3;
       populateButtons("end");
     }
     if (next == "noun") {
-    
+      stage = 5;
+      populateButtons("noun");
     }
   }
 }

@@ -9,10 +9,10 @@
     display: block;
     margin: auto;
     text-align: center;
-    width: 95%;
-    max-width: 800px;
+    width: 80%;
+    max-width: 500px;
     height: auto;
-    top: 100px;
+    top: 30px;
     border: 7px solid #2196F3;
     background: #323232;
     border-radius: 7px;
@@ -23,12 +23,12 @@
     font-weight: 600;
     color: white;
   }
-.buttonContainer {
+  .buttonContainer {
     margin: auto;
     width: 95%;
     max-width: 350px;
     height: auto;
-    top: 40px;
+    top: 70px;
     background-color: #141414;
   	position: relative;
     margin: auto;
@@ -51,6 +51,7 @@
     width: 250px;
     padding: 7px;
     margin: auto;
+    text-decoration: none;
   }
   .button:hover {
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.35));

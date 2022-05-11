@@ -25,7 +25,7 @@ nouns = [
   "elderberries [2",
   "fish n chips [2",
   "homeless mans socks [2",
-  "kebab made of your mother [1",
+  "a kebab made of your mother [1",
   "some dirty rag [1",
   "some dog [1",
   "someone insane [1",

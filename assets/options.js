@@ -90,7 +90,7 @@ verbs = [
   "is/are] where you can sit {end",
   "is/are] worthless {end",
   "was/were] born in {noun",
-  "was/were] burnt like a witch {noun",
+  "was/were] burnt like a witch {end",
   "was/were] defeated by {noun",
   "was/were] in jail {end",
   "was/were] owned by {noun",

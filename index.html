@@ -22,6 +22,6 @@ function titleMusic() {
   music.preservesPitch = false;
   music.onended = function() {titleMusic();};
 }
-titleMusic();
+document.body.addEventListener("mousemove", function () {music.play();})
 </script>
 </html>

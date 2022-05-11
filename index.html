@@ -22,6 +22,7 @@ function titleMusic() {
   music.onended = function() {titleMusic();};
 }
 document.body.addEventListener("mousemove", function () {music.play();})
+if (music.paused == true) {music.play();}
 </script>
 
 </html>

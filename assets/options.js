@@ -78,7 +78,7 @@ verbs = [
   "is/are] not interesting {end",
   "is/are] not migratory {end",
   "is/are] not Serious {end",
-  "is/are] old  {end",
+  "is/are] old {end",
   "is/are] racist {end",
   "is/are] rather plain {end",
   "is/are] rude {end",

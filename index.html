@@ -11,12 +11,12 @@
     <a class="button" href="gen">Make My Very Own Insult</a><br>
     <a class="button" href="https://tresre.dev/insult/gen?auto">Make An Insult For Me</a><br>
     <a class="button" href="https://github.com/tresre/insult">See This Project's Github Page</a>
-  </div>
-  <div style="height:80px;"></div>
+  </div><div style="height:80px;"></div>
 </body>
 <script>
 music = new Audio('https://tresre.dev/insult/assets/mp3/TitleMusic.mp3');
 function titleMusic() {
+  music.currentTime = 0;
   music.play();
   music.playbackRate = 1.2; 
   music.preservesPitch = false;

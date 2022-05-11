@@ -20,7 +20,7 @@ nouns = [
   "some animals [2",
   "an alien hamburger [1",
   "an English pig dog [1",
-  "an angry mob [2",
+  "an angry mob [1",
   "an ordinary pigsty [1",
   "elderberries [2",
   "fish n chips [2",

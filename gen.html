@@ -5,16 +5,17 @@
 <title>Oh... Insult! The Wacky Insult Generator</title>
 <style>@import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro);</style>
 
-<div class="gen"><a class="gen-text" id="display"></a></div><br><br><br>
-    
-<div class="buttonContainer">
+<body>
+  <div class="gen"><a class="gen-text" id="display"></a></div><br><br><br>
+  <div class="buttonContainer">
     <a class="button" onclick="button('button1')"><span id="button1">Option 1</span></a><br>
     <a class="button" onclick="button('button2')"><span id="button2">Option 2</span></a><br>
     <a class="button" onclick="button('button3')"><span id="button3">Option 3</span></a><br>
     <a class="button" onclick="button('button4')"><span id="button4">Option 4</span></a><br>
     <a class="button" onclick="button('button5')"><span id="button5">Option 5</span></a>
-</div>
-<div style="height:80px;"></div>
+  </div>
+  <div style="height:80px;"></div>
+</body>
 
 <script src="https://tresre.dev/insult/assets/options.js"></script>
 <script src="assets/js/gen.js"></script>
@@ -25,5 +26,4 @@ var urltext = String(checkurl);
 if (urltext == "auto") {autoGenerate();}
 </script>
 
-</body>
 </html>

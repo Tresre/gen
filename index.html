@@ -18,9 +18,9 @@
 music = new Audio('https://tresre.dev/insult/assets/mp3/TitleMusic.mp3');
 function titleMusic() {
   music.play();
-  music.onended = function() {
-    titleMusic();
-  };
+  music.playbackRate = 1.2; 
+  music.preservesPitch = false;
+  music.onended = function() {titleMusic();};
 }
 document.onload = function() {titleMusic();};
 </script>

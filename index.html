@@ -16,13 +16,13 @@
 
 <script>
 music = new Audio('https://tresre.dev/insult/assets/mp3/TitleMusic.mp3');
-music.currentTime = 0;
 function titleMusic() {
+  music.currentTime = 0;
   music.play();
   music.onended = function() {titleMusic();};
 }
-document.body.addEventListener("mousemove", function () {music.play();})
 titleMusic();
+document.body.addEventListener("mousemove", function () {music.play();})
 </script>
 
 </html>

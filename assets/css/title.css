@@ -1,10 +1,16 @@
-  html {
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>CPS Tester</title>
+<style>
+@import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro);
+html {
     background-color: #1e1e1e;
     -webkit-user-select: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
   }
-  .gen {
+  .time {
     position: relative;
     display: block;
     margin: auto;
@@ -16,8 +22,8 @@
     border: 7px solid #2196F3;
     background: #323232;
     border-radius: 7px;
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-size: 20px;
     font-family: Source Code Pro;
     font-weight: 600;
@@ -25,8 +31,8 @@
   }
   .buttonContainer {
     margin: auto;
-    width: 95%;
-    max-width: 350px;
+    width: 80%;
+    max-width: 500px;
     height: auto;
     top: 70px;
     background-color: #141414;
@@ -45,10 +51,10 @@
     font-family: Source Code Pro;
     font-weight: 600;
     color: #999999;
-    transition: .4s;
+    transition: .2s;
     background: #ddd;
     border-radius: 10px;
-    width: 250px;
+    width: 80%;
     padding: 7px;
     margin: auto;
     text-decoration: none;
@@ -61,3 +67,17 @@
     transform: scale(0.95);
     background-color: #2196F3;
   }
+</style>
+
+<body>
+  <div class="time">Time Elapsed: <span id="time">0:00</span></div>
+  <div class="buttonContainer">
+    <a class="button"><br>Clicks: <span id="clicks">0</span><br><br></a>
+  </div>
+</body>
+
+<script>
+
+</script>
+
+</html>

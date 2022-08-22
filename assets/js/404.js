@@ -19,12 +19,15 @@ function redirect() {
     words = output.split(' ').length;
     rating = 7;
     var stars = Math.floor(words/rating);
+    if (stars > 5) {
+      stars = 5;
+    }
     starstring = " ";
     for (var i=1;i<=stars; i++) {
       starstring = (starstring + "★");
     }
-    if (starstring.split('').length < 5) {
-      for (var i=1;i<=(5 - starstring.split('').length); i++) {
+    if (stars < 5) {
+      for (var i=1;i<=(5 - stars); i++) {
         starstring = (starstring + "☆");
       }
     }

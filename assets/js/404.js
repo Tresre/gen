@@ -17,7 +17,7 @@ function redirect() {
     document.getElementById("output").innerHTML = output;
     
     words = output.split(' ').length;
-    rating = 7;
+    rating = 5;
     var stars = Math.floor(words/rating);
     if (stars > 5) {
       stars = 5;

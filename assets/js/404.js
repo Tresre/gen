@@ -15,6 +15,16 @@ function redirect() {
     output = splitInput[0];
     output = output.replaceAll("+", " ");
     document.getElementById("output").innerHTML = output;
+    
+    words = output.split(' ').length;
+    rating = 7;
+    var stars = Math.floor(words/rating);
+    starstring = " ";
+    for (var i=1;i<=words; i++) {
+      starstring = (starstring + "★");
+    }
+    document.getElementById("stars").innerHTML = starstring;
+    
     if (splitInput[1] !== "muted") {
       console.log(output);
       setTimeout(function() {

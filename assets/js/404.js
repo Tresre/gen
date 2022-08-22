@@ -20,8 +20,13 @@ function redirect() {
     rating = 7;
     var stars = Math.floor(words/rating);
     starstring = " ";
-    for (var i=1;i<=words; i++) {
+    for (var i=1;i<=stars; i++) {
       starstring = (starstring + "★");
+    }
+    if (starstring.split('').length < 5) {
+      for (var i=1;i<=(5 - starstring.split('').length); i++) {
+        starstring = (starstring + "☆");
+      }
     }
     document.getElementById("stars").innerHTML = starstring;
     

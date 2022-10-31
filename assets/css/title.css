@@ -61,3 +61,6 @@
     transform: scale(0.95);
     background-color: #2196F3;
   }
+  .stars {
+    font-family: arial;
+  }

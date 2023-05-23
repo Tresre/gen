@@ -30,8 +30,15 @@ const splitButton5 = button5.split("[");
 document.getElementById("button5").innerHTML = capitalizeFirstLetter(splitButton5[0]);
 
 function button(id) {
+  sound = new Audio('https://tresre.dev/insult/assets/mp3/ButtonClick.mp3');
+  function buttonSound() {
+   sound.currentTime = 0;
+   sound.play();
+    sound.onended = function() {titleMusic();};
+  }
   if (display == undefined) {display = "";}
   if (stage == 0) {
+    buttonSound();
     var choice = capitalizeFirstLetter(window[id]);
     console.log(choice);
     const splitSemantic = choice.split("[");
@@ -43,6 +50,7 @@ function button(id) {
     return;
   }
   if (stage == 1) {
+    buttonSound();
     var choice = window[id];
     const splitSemantic = choice.split("[");
     console.log("plural " + plural);
@@ -52,6 +60,7 @@ function button(id) {
     return;
   }
   if (stage == 2) {
+    buttonSound();
     var choice = window[id];
     const splitSemantic = choice.split("]");
     const splitSemantic1 = (splitSemantic[1]).split("{");
@@ -65,6 +74,7 @@ function button(id) {
     return;
   }
   if (stage == 3) {
+    buttonSound();
     var choice = window[id];
     if (choice == "and") {
       stage = 4;
@@ -110,6 +120,7 @@ function button(id) {
     }
   }
   if (stage == 4) {
+    buttonSound();
     var choice = window[id];
     const buttonChoice = id.split("button");
     if (buttonChoice[1] < 4) {
@@ -134,6 +145,7 @@ function button(id) {
       return;
     }
   }
+  buttonSound();
   if (stage == 5) {
     var choice = window[id];
     const splitSemantic = choice.split("[");
